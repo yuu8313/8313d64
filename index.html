@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8313b64変換ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>8313b64変換ツール</h1>
+        
+        <div class="section">
+            <h2>ファイルを8313b64に変換</h2>
+            <input type="file" id="encodeFile" accept=".png,.webp,.jpg,.jpeg,.gif,.avif,.mp3,.ogg,.aac,.wav,.csv,.svg,.html,.css,.js,.py,.pdf,.md,.mp4,.webm">
+            <div class="checkbox-container">
+                <input type="checkbox" id="useCompression" checked>
+                <label for="useCompression">LZ-String圧縮を使用</label>
+            </div>
+            <button id="encodeButton">8313b64に変換してダウンロード</button>
+        </div>
+
+        <div id="progressContainer" class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div id="statusMessage" class="status-message"></div>
+
+        <div class="section">
+            <h2>8313b64からファイルに変換</h2>
+            <input type="file" id="decodeFile" accept=".8313b64">
+            <div class="checkbox-container">
+                <input type="checkbox" id="useDecompression" checked>
+                <label for="useDecompression">LZ-String解凍を使用</label>
+            </div>
+            <button id="decodeButton">ファイルに変換してダウンロード</button>
+        </div>
+
+        <div class="section">
+            <h2>変換,,,</h2>
+            <textarea id="previewArea" readonly></textarea>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lz-string/libs/lz-string.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
